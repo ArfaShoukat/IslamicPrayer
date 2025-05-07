@@ -17,7 +17,7 @@ const Header = () => {
       </div>
 
     </header>
-    <DateInfoPage/></div>
+     </div>
   );
 };
 

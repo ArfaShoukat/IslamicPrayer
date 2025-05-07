@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import PrayerCountdown from '../components/PrayerCountdown';
 import HijriDate from '../components/HijriDate';
+import DateInfoPage from '../components/DateInfoPage';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -22,7 +23,13 @@ const Home = () => {
 
   return (
     <div className="home">
+      <br/>
+    <div  className="DateInfowrapper">
+      <DateInfoPage/>
+      <HijriDate/>
+    </div>
       <div className="countdown-wrapper">
+        
         <PrayerCountdown />
       </div>
 
@@ -71,9 +78,7 @@ const Home = () => {
       </section>
 
       {/* Horizontally centered HijriDate */}
-      <div className="hijri-date-center">
-        <HijriDate />
-      </div>
+      
     </div>
   );
 };

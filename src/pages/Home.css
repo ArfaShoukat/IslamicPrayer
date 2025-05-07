@@ -86,8 +86,36 @@
 .countdown-wrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-top: 2rem;
 }
+.DateInfowrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 2rem; /* Adds space between the two components */
+  flex-wrap: wrap; /* Allows them to stack on smaller screens */
+  margin-top: 15rem;
+}
+
+/* Make DateInfoPage and HijriDate take up equal space on desktop */
+.DateInfowrapper > * {
+  /* flex: 1 1 45%; */
+  min-width: 300px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .DateInfowrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .DateInfowrapper > * {
+    width: 100%;
+    max-width: 95%;
+  }
+}
+
 
 .hijri-date-center  {
   display: flex;
