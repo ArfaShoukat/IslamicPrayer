@@ -1,0 +1,35 @@
+.quran-page {
+    padding: 30px 20px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  .quran-page h2 {
+    margin-bottom: 30px;
+    color: #0d3b66;
+  }
+  
+  .quran-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .verse-box {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .arabic {
+    font-size: 1.4rem;
+    color: #1d7874;
+    margin-bottom: 10px;
+  }
+  
+  .urdu {
+    font-size: 1rem;
+    color: #333;
+  }
+  

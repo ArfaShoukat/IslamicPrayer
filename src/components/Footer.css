@@ -1,0 +1,20 @@
+.footer {
+    background-color: #0d3b66;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer-content p {
+    margin: 5px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content p {
+      font-size: 0.9rem;
+    }
+  }
+  

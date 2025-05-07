@@ -1,0 +1,31 @@
+.prayer-countdown {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.prayer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.prayer-box {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.prayer-box:hover {
+  transform: translateY(-4px);
+}
+
+.error {
+  color: red;
+  margin-top: 0.5rem;
+}

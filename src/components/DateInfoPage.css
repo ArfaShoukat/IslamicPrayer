@@ -1,0 +1,99 @@
+.date-info-page {
+  padding: 20px 10px;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #000000;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.date-info-page h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.date-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 2rem;
+  border-radius: 16px;
+  width: 50%;
+  max-width: 480px;
+  margin: 0 auto;
+  backdrop-filter: blur(6px);
+}
+
+.date-box p {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* 🔄 Location Change Section */
+.location-change-box {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location-change-box input {
+  padding: 10px;
+  width: 300px;
+  max-width: 90%;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #ffffff;
+  color: #001012;
+}
+
+.location-change-box button {
+  background-color: #2e2d92;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.location-change-box button:hover {
+  background-color: #1d1c70;
+  transform: scale(1.03);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .date-box {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .date-info-page h2 {
+    font-size: 2rem;
+  }
+
+  .date-box p {
+    font-size: 1rem;
+  }
+
+  .location-change-box input {
+    width: 90%;
+    font-size: 0.95rem;
+  }
+
+  .location-change-box button {
+    font-size: 0.95rem;
+  }
+}
