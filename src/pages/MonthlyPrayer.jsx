@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './MonthlyPrayer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+
 
 const MonthlyPrayer = () => {
   const [calendar, setCalendar] = useState([]);
@@ -38,9 +41,19 @@ const MonthlyPrayer = () => {
     }
   }, []);
 
+  const isToday = (dateString) => {
+    const today = new Date();
+    const current = new Date(dateString);
+    return (
+      today.getDate() === current.getDate() &&
+      today.getMonth() === current.getMonth() &&
+      today.getFullYear() === current.getFullYear()
+    );
+  };
+
   return (
     <div className="monthly-calendar-page">
-      <h2>📅 Monthly Prayer Calendar (Hanafi)</h2>
+      <h2><FontAwesomeIcon icon={faCalendarAlt} /> Monthly Prayer Calendar (Hanafi)</h2>
       {error && <p className="error">{error}</p>}
 
       {calendar.length > 0 ? (
@@ -54,7 +67,10 @@ const MonthlyPrayer = () => {
             <span>Isha</span>
           </div>
           {calendar.map((day, index) => (
-            <div key={index} className="calendar-row">
+            <div
+              key={index}
+              className={`calendar-row ${isToday(day.date.gregorian.date) ? 'today-row' : ''}`}
+            >
               <span>{day.date.readable}</span>
               <span>{day.timings.Fajr.split(' ')[0]}</span>
               <span>{day.timings.Dhuhr.split(' ')[0]}</span>

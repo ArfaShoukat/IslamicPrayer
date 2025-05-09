@@ -1,13 +1,19 @@
 .home {
-  padding: 40px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom, #f0f4f8, #ffffff);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .intro {
   text-align: center;
   margin-bottom: 40px;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .intro h2 {
@@ -26,9 +32,13 @@
 
 .features {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 24px;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .feature-box {
@@ -41,6 +51,7 @@
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, background-color 0.3s ease;
   border: 1px solid #e0e0e0;
+  margin-bottom: 24px;
 }
 
 .feature-box h3 {
@@ -75,10 +86,11 @@
   .features {
     flex-direction: column;
     align-items: center;
+    gap: 16px;
   }
 
   .feature-box {
-    width: 90%;
+    width: 100%;
     max-width: 95%;
   }
 }
@@ -88,38 +100,28 @@
   justify-content: center;
   margin-top: 2rem;
 }
-.DateInfowrapper {
+
+.feature-icon {
+  margin-bottom: 10px;
+  color: #0d3b66;
+}
+
+.date-info-hijri-wrapper {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 2rem; /* Adds space between the two components */
-  flex-wrap: wrap; /* Allows them to stack on smaller screens */
-  margin-top: 15rem;
-}
-
-/* Make DateInfoPage and HijriDate take up equal space on desktop */
-.DateInfowrapper > * {
-  /* flex: 1 1 45%; */
-  min-width: 300px;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .DateInfowrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .DateInfowrapper > * {
-    width: 100%;
-    max-width: 95%;
-  }
-}
-
-
-.hijri-date-center  {
-  display: flex;
-  justify-content: center;
-  margin: 2rem auto;
+  flex-wrap: wrap;
   width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 20px;
+  gap: 20px;
+  box-sizing: border-box;
 }
+
+.date-info-hijri-wrapper > * {
+  flex: 1;
+  min-width: 280px;
+}
+
+

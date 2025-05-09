@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './PrayerCountdown.css';
+import { motion } from 'framer-motion';
+import {
+  BsMoonStars, BsSun, BsClock, BsSunset, BsStars
+} from 'react-icons/bs';
 
 const PrayerCountdown = () => {
   const [prayerTimes, setPrayerTimes] = useState({});
@@ -71,18 +75,40 @@ const PrayerCountdown = () => {
     return () => clearInterval(interval);
   }, [prayerTimes]);
 
+  const prayerIcons = {
+    Fajr: <BsMoonStars />,
+    Dhuhr: <BsSun />,
+    Asr: <BsClock />,
+    Maghrib: <BsSunset />,
+    Isha: <BsStars />
+  };
+
   return (
     <div className="prayer-countdown">
       <h3>🕒 Remaining Time for Each Prayer</h3>
       {error && <p className="error">{error}</p>}
+<div className='mid-prayer'>
       <div className="prayer-row">
         {Object.keys(remainingTimes).map((key) => (
-          <div className="prayer-box" key={key}>
+          <motion.div
+            className="prayer-box"
+            key={key}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            whileHover={{ scale: 1.05, boxShadow: '0 8px 16px rgba(0,0,0,0.15)' }}
+            whileTap={{ scale: 0.95 }}
+          >
             <strong>{key}</strong>
-            <div>🕌 {convertTo12Hour(prayerTimes[key])}</div>
-            <div>⏳ {remainingTimes[key]}</div>
-          </div>
+            <div className="time-row">
+              {prayerIcons[key]} {convertTo12Hour(prayerTimes[key])}
+            </div>
+            <div className="time-row">
+              <BsClock /> {remainingTimes[key]}
+            </div>
+          </motion.div>
         ))}
+      </div>
       </div>
     </div>
   );

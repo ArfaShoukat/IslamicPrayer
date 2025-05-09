@@ -5,6 +5,10 @@ import { motion } from 'framer-motion';
 import PrayerCountdown from '../components/PrayerCountdown';
 import HijriDate from '../components/HijriDate';
 import DateInfoPage from '../components/DateInfoPage';
+import Footer from '../components/Footer';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock, faCalendarAlt, faBookQuran } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -21,19 +25,33 @@ const Home = () => {
     }),
   };
 
+  const features = [
+    // {
+    //   icon: faClock,
+    //   title: 'Daily Prayer Times',
+    //   desc: 'Click to view today’s Hanafi prayer times based on your location.',
+    //   onClick: () => navigate('/PrayerTime'),
+    // },
+    {
+      icon: faCalendarAlt,
+      title: 'Monthly Prayer Calendar',
+      desc: 'Plan your prayers ahead with our Islamic calendar.',
+      onClick: () => navigate('/MonthlyPrayer'),
+    },
+    {
+      title: ' 📖 Quranic Verses',
+      desc: 'Read and reflect on the Quran with daily verses and teachings.',
+      onClick: () => navigate('/QuranicVerse'),
+    },
+  ];
+
   return (
     <div className="home">
-      <br/>
-    <div  className="DateInfowrapper">
-      <DateInfoPage/>
-      <HijriDate/>
-    </div>
-      <div className="countdown-wrapper">
-        
-        <PrayerCountdown />
-      </div>
-
-      <section className="intro">
+      <div className="date-info-hijri-wrapper">
+  <DateInfoPage />
+  <HijriDate />
+</div>
+       <section className="intro">
         <motion.h2 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
           Welcome to Islamic Prayer
         </motion.h2>
@@ -42,24 +60,14 @@ const Home = () => {
         </motion.p>
       </section>
 
+
+      <div className="countdown-wrapper">
+        <PrayerCountdown />
+      </div>
+
+    
       <section className="features">
-        {[
-          {
-            title: '🕋 Daily Prayer Times',
-            desc: 'Click to view today’s Hanafi prayer times based on your location.',
-            onClick: () => navigate('/PrayerTime'),
-          },
-          {
-            title: '📅 Monthly Prayer Calendar',
-            desc: 'Plan your prayers ahead with our Islamic calendar.',
-            onClick: () => navigate('/MonthlyPrayer'),
-          },
-          {
-            title: '📖 Quranic Verses',
-            desc: 'Read and reflect on the Quran with daily verses and teachings.',
-            onClick: () => navigate('/QuranicVerse'),
-          },
-        ].map((item, i) => (
+        {features.map((item, i) => (
           <motion.div
             className="feature-box clickable"
             key={i}
@@ -71,14 +79,15 @@ const Home = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
+            <FontAwesomeIcon icon={item.icon} size="2x" className="feature-icon" />
             <h3>{item.title}</h3>
             <p>{item.desc}</p>
           </motion.div>
         ))}
       </section>
 
-      {/* Horizontally centered HijriDate */}
-      
+      <br /><br />
+      <Footer />
     </div>
   );
 };

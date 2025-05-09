@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 import moment from 'moment-timezone';
 import 'moment/locale/en-gb';
 import axios from 'axios';
-import './DateInfoPage.css'
+import './DateInfoPage.css';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendarAlt, faMoon, faClock } from '@fortawesome/free-solid-svg-icons';
 
 const DateInfoPage = () => {
   const [hijriDate, setHijriDate] = useState('');
@@ -33,11 +36,19 @@ const DateInfoPage = () => {
 
   return (
     <div className="date-info-page">
-      
       <div className="date-box">
-        <p><span role="img" aria-label="calendar">📆</span> {currentTime}</p>
-        <p><span role="img" aria-label="moon">🌙</span> Hijri: {hijriDate}</p>
-        <p><span role="img" aria-label="timezone">🕒</span> Timezone: {timezone}</p>
+        <p>
+          <FontAwesomeIcon icon={faCalendarAlt} className="date-icon" />
+          {currentTime}
+        </p>
+        <p>
+          <FontAwesomeIcon icon={faMoon} className="date-icon" />
+          Hijri: {hijriDate}
+        </p>
+        <p>
+          <FontAwesomeIcon icon={faClock} className="date-icon" />
+          Timezone: {timezone}
+        </p>
       </div>
     </div>
   );

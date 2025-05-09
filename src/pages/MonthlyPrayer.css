@@ -62,30 +62,48 @@
   word-wrap: break-word;
 }
 
-/* Responsive layout */
+/* Highlight today */
+.today-row {
+  background-color: #e8f7e4 !important;
+  font-weight: bold;
+}
+
+/* Mobile responsive layout */
 @media (max-width: 768px) {
   .calendar-header,
   .calendar-row {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-      "date date date"
-      "fajr dhuhr asr"
-      "maghrib isha isha";
-    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     font-size: 0.9rem;
+    padding: 10px;
   }
 
-  .calendar-header span:nth-child(1) { grid-area: date; }
-  .calendar-header span:nth-child(2) { grid-area: fajr; }
-  .calendar-header span:nth-child(3) { grid-area: dhuhr; }
-  .calendar-header span:nth-child(4) { grid-area: asr; }
-  .calendar-header span:nth-child(5) { grid-area: maghrib; }
-  .calendar-header span:nth-child(6) { grid-area: isha; }
+  .calendar-header span {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #ffcc00;
+  }
 
-  .calendar-row span:nth-child(1) { grid-area: date; font-weight: 600; }
-  .calendar-row span:nth-child(2) { grid-area: fajr; }
-  .calendar-row span:nth-child(3) { grid-area: dhuhr; }
-  .calendar-row span:nth-child(4) { grid-area: asr; }
-  .calendar-row span:nth-child(5) { grid-area: maghrib; }
-  .calendar-row span:nth-child(6) { grid-area: isha; }
+  .calendar-row span {
+    margin: 3px 0;
+    color: #ffcc00;
+  }
+
+  .calendar-row span:first-child {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+
+  .calendar-row {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.monthly-calendar-page h2 svg {
+  margin-right: 8px;
+  color: #0d3b66;
 }

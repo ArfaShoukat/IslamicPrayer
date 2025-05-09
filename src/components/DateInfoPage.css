@@ -1,17 +1,17 @@
 .date-info-page {
-  /* padding: 20px 0px; */
-
+  padding: 15px 5px;
   color: #000000;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
   /* border-radius: 5%; */
-  
-  
-  
- 
+
+}
+.date-icon {
+  color: #0d3b66;
+  font-size: 1.2rem;
 }
 
-.date-info-page h2 {
+.date-info-page h2 { 
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #000000;
@@ -19,21 +19,30 @@
 }
 
 .date-box {
-  background: rgba(255, 255, 255, 0.05);
+  background-color: #e1e3e4;
+
   border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 1rem;
+  /* padding: 1rem; */
   border-radius: 16px;
-  width: 50%;
+  width: 100%;
   max-width: 480px;
   margin: 0 auto;
   backdrop-filter: blur(6px);
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
 }
 
 .date-box p {
   font-size: 1.1rem;
   margin: 1rem 0;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   gap: 0.6rem;
   color: #000000;

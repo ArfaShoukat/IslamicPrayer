@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './HijriDate.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 
 const HijriDate = () => {
   const [gregorianDate, setGregorianDate] = useState('');
@@ -32,22 +34,24 @@ const HijriDate = () => {
   }, []);
 
   return (
-    <div className="card hijri-card">
-      <h3>📅 Hijri Date Converter</h3>
-      <div className="input-group">
-        <input
-          type="date"
-          value={gregorianDate}
-          onChange={(e) => {
-            setGregorianDate(e.target.value);
-            convertToHijri(e.target.value);
-          }}
-        />
-        <button onClick={() => convertToHijri(gregorianDate)}>Convert</button>
+    <div className="container">
+      <div className="card hijri-card">
+        <h3><FontAwesomeIcon icon={faCalendarAlt} className='icon'/> Hijri Date Converter</h3>
+        <div className="input-group">
+          <input
+            type="date"
+            value={gregorianDate}
+            onChange={(e) => {
+              setGregorianDate(e.target.value);
+              convertToHijri(e.target.value);
+            }}
+          />
+          <button onClick={() => convertToHijri(gregorianDate)}>Convert</button>
+        </div>
+        {hijriDate && <h4>{hijriDate}</h4>}
+        {error && <p className="error">{error}</p>}
+        <p className="note">There is a small probability of one day error</p>
       </div>
-      {hijriDate && <h4>{hijriDate}</h4>}
-      {error && <p className="error">{error}</p>}
-      <p className="note">There is a small probability of one day error</p>
     </div>
   );
 };

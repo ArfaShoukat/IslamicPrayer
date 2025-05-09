@@ -19,7 +19,7 @@ function App() {
         <Route path="/Quran" element={<Quran />} />
 
       </Routes>
-      <Footer />
+     
     </Router>
   );
 }

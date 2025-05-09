@@ -1,66 +1,83 @@
+/* Container to add safe spacing around card */
+.container {
+  padding: 1rem;
+}
+
+/* Card styling */
 .card {
-    background: white;
-    border-radius: 1rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    padding: 2rem;
-    margin: 1rem;
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .hijri-card {
-    align-self: flex-start;
-    min-height: auto;
-  }
-  
-  .input-group {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 1rem;
-    align-items: center;
-  }
-  
-  /* Improved date input styling */
-  input[type="date"] {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    background-color: #f9f9f9;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
-    flex: 1;
-  }
-  
-  input[type="date"]:focus {
-    border-color: #4438ca;
-    box-shadow: 0 0 0 3px rgba(68, 56, 202, 0.2);
-    background-color: #fff;
-  }
-  
-  button {
-    padding: 0.5rem 1rem;
-    background: #4438ca;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-  
-  button:hover {
-    background-color: #372fad;
-  }
-  
-  .note {
-    font-size: 0.85rem;
-    color: gray;
-    margin-top: 0.5rem;
-  }
-  
-  .error {
-    color: red;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-  }
-  
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+.icon{
+  color: #0d3b66;
+  font-size: 1.2rem;
+}
+/* Specific card variant */
+.hijri-card {
+  align-self: flex-start;
+  min-height: auto;
+}
+
+/* Grouping input and button */
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  align-items: center;
+  flex-wrap: wrap; /* Ensure wrapping on small screens */
+}
+
+/* Date input styling */
+input[type="date"] {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  flex: 1;
+  min-width: 0;
+}
+
+input[type="date"]:focus {
+  border-color: #4438ca;
+  box-shadow: 0 0 0 3px rgba(68, 56, 202, 0.2);
+  background-color: #fff;
+}
+
+/* Button styling */
+button {
+  padding: 0.5rem 1rem;
+  background: #4438ca;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+
+button:hover {
+  background-color: #372fad;
+}
+
+/* Note and error text */
+.note {
+  font-size: 0.85rem;
+  color: gray;
+  margin-top: 0.5rem;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}

@@ -1,61 +1,52 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './QuranicVerse.css';
 
 const QuranicVerse = () => {
-  const [verse, setVerse] = useState(null);
-  const [error, setError] = useState('');
+  const verses = [
+    {
+      arabic: 'إِنَّ مَعَ ٱلْعُسْرِ يُسْرًۭا',
+      translation: 'Surely with ˹that˺ hardship comes ˹more˺ ease.',
+      surah: 'Ash-Sharh',
+      surahNumber: 94,
+      ayahNumber: 6,
+    },
+    {
+      arabic: 'وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰٓ',
+      translation: 'And your Lord is going to give you, and you will be satisfied.',
+      surah: 'Ad-Duhaa',
+      surahNumber: 93,
+      ayahNumber: 5,
+    },
+    {
+      arabic: 'إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ',
+      translation: 'When God’s help and victory come,',
+      surah: 'An-Nasr',
+      surahNumber: 110,
+      ayahNumber: 1,
+    },
+  ];
 
-  useEffect(() => {
-    const fetchVerse = async () => {
-      try {
-        const response = await fetch('https://api.alquran.cloud/v1/ayah/random/en.asad');
-        const data = await response.json();
-        setVerse(data.data);
-      } catch (err) {
-        setError('Failed to load Quranic verse.');
-      }
-    };
-
-    fetchVerse();
-  }, []);
-
-  const surahNasr = {
-    arabic: ['إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ', 'وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا', 'فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ ۚ إِنَّهُ كَانَ تَوَّابًا'],
-    translation: [
-      'When God’s help and victory come,',
-      'and you see people entering God’s religion in multitudes,',
-      'then glorify your Lord’s praise and ask His forgiveness. Surely, He is ever Accepting of repentance.'
-    ],
-    name: 'An-Nasr',
-    number: 110
+  // Calculate which verse to show based on the day number
+  const getVerseOfTheDay = () => {
+    const startDate = new Date('2024-01-01'); // Fixed start date
+    const today = new Date();
+    const diffTime = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+    const index = diffTime % verses.length;
+    return verses[index];
   };
+
+  const verse = getVerseOfTheDay();
 
   return (
     <div className="quranic-verse-page">
       <h2>📖 Quranic Verse of the Day</h2>
 
-      {error && <p className="error">{error}</p>}
-
-      {verse ? (
-        <div >
-          {/* <p className="ayah-text">"{verse.text}"</p>
-          <p className="ayah-info">
-            — Surah {verse.surah.englishName} ({verse.surah.name}), Ayah {verse.numberInSurah}
-          </p> */}
-        </div>
-      ) : (
-        !error && <p className="loading">Loading verse...</p>
-      )}
-
-      {/* Surah An-Nasr Card */}
       <div className="verse-box">
-        <h3>📜 Surah {surahNasr.name} (Surah {surahNasr.number})</h3>
-        {surahNasr.arabic.map((ayah, i) => (
-          <div key={i} className="nasr-ayah">
-            <p className="arabic-text">{ayah}</p>
-            <p className="tarjuma-text">{surahNasr.translation[i]}</p>
-          </div>
-        ))}
+        <h3>📜 Surah {verse.surah} (Surah {verse.surahNumber})</h3>
+        <div className="nasr-ayah">
+          <p className="arabic-text">{verse.arabic}</p>
+          <p className="tarjuma-text">{verse.translation}</p>
+        </div>
       </div>
     </div>
   );
