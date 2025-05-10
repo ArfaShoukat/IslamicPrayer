@@ -25,10 +25,8 @@ const QuranicVerse = () => {
       ayahNumber: 1,
     },
   ];
-
-  // Calculate which verse to show based on the day number
   const getVerseOfTheDay = () => {
-    const startDate = new Date('2024-01-01'); // Fixed start date
+    const startDate = new Date('2024-01-01');
     const today = new Date();
     const diffTime = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
     const index = diffTime % verses.length;
@@ -39,13 +37,14 @@ const QuranicVerse = () => {
 
   return (
     <div className="quranic-verse-page">
-      <h2>📖 Quranic Verse of the Day</h2>
+      <h1>📖 Quranic Verse of the Day</h1>
 
       <div className="verse-box">
         <h3>📜 Surah {verse.surah} (Surah {verse.surahNumber})</h3>
         <div className="nasr-ayah">
           <p className="arabic-text">{verse.arabic}</p>
           <p className="tarjuma-text">{verse.translation}</p>
+          <p className='tarjuma-text'> Ayat: {verse.ayahNumber}, Surah No : {verse.surahNumber}</p>
         </div>
       </div>
     </div>

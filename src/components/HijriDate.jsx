@@ -36,7 +36,7 @@ const HijriDate = () => {
   return (
     <div className="container">
       <div className="card hijri-card">
-        <h3><FontAwesomeIcon icon={faCalendarAlt} className='icon'/> Hijri Date Converter</h3>
+        <h3 className='card-text'><FontAwesomeIcon icon={faCalendarAlt} className='icon'/> Hijri Date Converter</h3>
         <div className="input-group">
           <input
             type="date"
@@ -48,7 +48,7 @@ const HijriDate = () => {
           />
           <button onClick={() => convertToHijri(gregorianDate)}>Convert</button>
         </div>
-        {hijriDate && <h4>{hijriDate}</h4>}
+        {hijriDate && <h4 className='hijri_h4'>{hijriDate}</h4>}
         {error && <p className="error">{error}</p>}
         <p className="note">There is a small probability of one day error</p>
       </div>

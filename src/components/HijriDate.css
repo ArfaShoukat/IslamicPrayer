@@ -1,39 +1,36 @@
-/* Container to add safe spacing around card */
 .container {
   padding: 1rem;
 }
-
-/* Card styling */
 .card {
-  background: white;
+  background: rgb(215, 237, 240);
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
+  padding: 2.2rem;
   margin: 1rem auto;
   width: 100%;
-  max-width: 400px;
+  max-width: 480px;
   box-sizing: border-box;
+}
+.card-text{
+  color: black;
 }
 .icon{
   color: #0d3b66;
   font-size: 1.2rem;
 }
-/* Specific card variant */
 .hijri-card {
   align-self: flex-start;
   min-height: auto;
 }
 
-/* Grouping input and button */
 .input-group {
   display: flex;
   gap: 0.5rem;
   margin-top: 1rem;
   align-items: center;
-  flex-wrap: wrap; /* Ensure wrapping on small screens */
+  flex-wrap: wrap;
 }
 
-/* Date input styling */
 input[type="date"] {
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -51,7 +48,6 @@ input[type="date"]:focus {
   background-color: #fff;
 }
 
-/* Button styling */
 button {
   padding: 0.5rem 1rem;
   background: #4438ca;
@@ -69,13 +65,17 @@ button:hover {
   background-color: #372fad;
 }
 
-/* Note and error text */
 .note {
   font-size: 0.85rem;
   color: gray;
   margin-top: 0.5rem;
+  text-align: center;
 }
+.hijri_h4{
+   margin-top: 0.5rem;
+ text-align: center;
 
+}
 .error {
   color: red;
   font-size: 0.9rem;

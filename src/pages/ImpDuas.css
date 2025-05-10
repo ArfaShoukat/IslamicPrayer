@@ -1,0 +1,47 @@
+.imp-duas-page {
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.duas-desc {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.duas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.dua-card {
+  background: #f9f9f9;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+  direction: rtl;
+}
+
+.dua-arabic {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.dua-translation {
+  direction: ltr;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.dua-source {
+  direction: ltr;
+  font-style: italic;
+  color: #888;
+  font-size: 0.9rem;
+}

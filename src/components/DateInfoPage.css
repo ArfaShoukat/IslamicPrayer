@@ -3,14 +3,11 @@
   color: #000000;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
-  /* border-radius: 5%; */
-
 }
 .date-icon {
   color: #0d3b66;
   font-size: 1.2rem;
 }
-
 .date-info-page h2 { 
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -19,22 +16,16 @@
 }
 
 .date-box {
-  background-color: #e1e3e4;
-
   border: 1px solid rgba(255, 255, 255, 0.15);
-  /* padding: 1rem; */
   border-radius: 16px;
-  width: 100%;
   max-width: 480px;
-  margin: 0 auto;
+  margin: 1rem 0 auto;
   backdrop-filter: blur(6px);
-  background: white;
+   background: rgb(215, 237, 240);
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
-  margin: 1rem auto;
+  padding: 3.2rem;
   width: 100%;
-  max-width: 400px;
   box-sizing: border-box;
 }
 

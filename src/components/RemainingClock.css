@@ -1,0 +1,26 @@
+/* RemainingClock.css */
+.remaining-clock {
+  background: #f0f9ff;
+  border: 2px solid #0077b6;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 300px;
+  margin: 20px auto;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.remaining-clock h2 {
+  color: #023e8a;
+  margin-bottom: 15px;
+}
+
+.clock-info p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+strong {
+  color: #0077b6;
+}

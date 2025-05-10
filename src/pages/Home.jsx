@@ -8,7 +8,12 @@ import DateInfoPage from '../components/DateInfoPage';
 import Footer from '../components/Footer';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faCalendarAlt, faBookQuran } from '@fortawesome/free-solid-svg-icons';
+import {
+  faClock,
+  faCalendarAlt,
+  faBookQuran,
+  faHandsPraying,
+} from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -26,12 +31,12 @@ const Home = () => {
   };
 
   const features = [
-    // {
-    //   icon: faClock,
-    //   title: 'Daily Prayer Times',
-    //   desc: 'Click to view today’s Hanafi prayer times based on your location.',
-    //   onClick: () => navigate('/PrayerTime'),
-    // },
+    {
+      icon: faHandsPraying,
+      title: 'Important Duas',
+      desc: 'You must include these duas in your prayers.',
+      onClick: () => navigate('/ImpDuas'),
+    },
     {
       icon: faCalendarAlt,
       title: 'Monthly Prayer Calendar',
@@ -39,7 +44,8 @@ const Home = () => {
       onClick: () => navigate('/MonthlyPrayer'),
     },
     {
-      title: ' 📖 Quranic Verses',
+      icon: faBookQuran,
+      title: '📖 Quranic Verses',
       desc: 'Read and reflect on the Quran with daily verses and teachings.',
       onClick: () => navigate('/QuranicVerse'),
     },
@@ -48,25 +54,26 @@ const Home = () => {
   return (
     <div className="home">
       <div className="date-info-hijri-wrapper">
-  <DateInfoPage />
-  <HijriDate />
-</div>
-       <section className="intro">
+        <DateInfoPage />
+        <HijriDate />
+      </div>
+
+      {/* <section className="intro">
         <motion.h2 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
           Welcome to Islamic Prayer
         </motion.h2>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
           Stay connected to your daily prayers, Quranic teachings, and more based on your city.
         </motion.p>
-      </section>
+      </section> */}
 
-
-      <div className="countdown-wrapper">
+      {/* Spaced Prayer Countdown */}
+      <div className="countdown-wrapper spaced-section">
         <PrayerCountdown />
       </div>
 
-    
-      <section className="features">
+      {/* Spaced Features Section */}
+      <section className="features spaced-section">
         {features.map((item, i) => (
           <motion.div
             className="feature-box clickable"
@@ -86,7 +93,6 @@ const Home = () => {
         ))}
       </section>
 
-      <br /><br />
       <Footer />
     </div>
   );

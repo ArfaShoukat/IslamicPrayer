@@ -105,6 +105,9 @@
   margin-bottom: 10px;
   color: #0d3b66;
 }
+.spaced-section {
+  margin: 2rem 0;
+}
 
 .date-info-hijri-wrapper {
   display: flex;
@@ -123,5 +126,8 @@
   flex: 1;
   min-width: 280px;
 }
+
+
+
 
 
