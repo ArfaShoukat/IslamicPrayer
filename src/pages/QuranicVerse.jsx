@@ -1,5 +1,6 @@
 import React from 'react';
 import './QuranicVerse.css';
+import BackArrow from '../components/BackArrow';
 
 const QuranicVerse = () => {
   const verses = [
@@ -37,6 +38,7 @@ const QuranicVerse = () => {
 
   return (
     <div className="quranic-verse-page">
+      <BackArrow/>
       <h1>📖 Quranic Verse of the Day</h1>
 
       <div className="verse-box">

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './MonthlyPrayer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import BackArrow from '../components/BackArrow';
 
 
 const MonthlyPrayer = () => {
@@ -53,6 +54,7 @@ const MonthlyPrayer = () => {
 
   return (
     <div className="monthly-calendar-page">
+       <BackArrow/>
       <h2><FontAwesomeIcon icon={faCalendarAlt} /> Monthly Prayer Calendar (Hanafi)</h2>
       {error && <p className="error">{error}</p>}
 

@@ -36,7 +36,7 @@ const HijriDate = () => {
   return (
     <div className="container">
       <div className="card hijri-card">
-        <h3 className='card-text'><FontAwesomeIcon icon={faCalendarAlt} className='icon'/> Hijri Date Converter</h3>
+        <h3 className='card-text'><FontAwesomeIcon icon={faCalendarAlt} className='icon' /> Hijri Date Converter</h3>
         <div className="input-group">
           <input
             type="date"

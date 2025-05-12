@@ -4,9 +4,8 @@ import ImpDuas from './pages/ImpDuas';
 import Header from './components/Header';
 import MonthlyPrayer from './pages/MonthlyPrayer';
 import QuranicVerse from './pages/QuranicVerse'
-import Quran from './pages/Quran';
-import AlQuran from './components/AlQuran.jsx';
-import AlMunajaat from './components/AlMunajaat.jsx';
+import AlQuran from './pages/AlQuran.jsx';
+import AlMunajaat from './pages/AlMunajaat.jsx';
 
 function App() {
   return (
@@ -17,11 +16,10 @@ function App() {
         <Route path="/ImpDuas" element={<ImpDuas />} />
         <Route path="/MonthlyPrayer" element={<MonthlyPrayer />} />
         <Route path="/QuranicVerse" element={<QuranicVerse />} />
-        <Route path="/Quran" element={<Quran />} />
-       <Route path="/AlMunajaat" element={<AlMunajaat />} />
-       <Route path="/AlQuran" element={<AlQuran />} />
+        <Route path="/AlMunajaat" element={<AlMunajaat />} />
+        <Route path="/AlQuran" element={<AlQuran />} />
       </Routes>
-     
+
     </Router>
   );
 }

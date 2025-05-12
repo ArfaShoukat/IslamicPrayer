@@ -1,6 +1,7 @@
 .container {
   padding: 1rem;
 }
+
 .card {
   background: rgb(215, 237, 240);
   border-radius: 1rem;
@@ -11,13 +12,16 @@
   max-width: 480px;
   box-sizing: border-box;
 }
-.card-text{
+
+.card-text {
   color: black;
 }
-.icon{
+
+.icon {
   color: #0d3b66;
   font-size: 1.2rem;
 }
+
 .hijri-card {
   align-self: flex-start;
   min-height: auto;
@@ -71,11 +75,13 @@ button:hover {
   margin-top: 0.5rem;
   text-align: center;
 }
-.hijri_h4{
-   margin-top: 0.5rem;
- text-align: center;
+
+.hijri_h4 {
+  margin-top: 0.5rem;
+  text-align: center;
 
 }
+
 .error {
   color: red;
   font-size: 0.9rem;

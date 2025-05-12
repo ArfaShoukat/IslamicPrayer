@@ -50,17 +50,17 @@ const Home = () => {
       onClick: () => navigate('/QuranicVerse'),
     },
     {
-  icon: faBookQuran,
-  title: '📖 Munajaate Maqbool',
-  desc: 'You must include these duas in your prayers.',
-  onClick: () => navigate('/AlMunajaat'),
-},
- {
-  icon: faBookQuran,
-  title: '📖 Al Quran',
-  desc: 'You must include these duas in your prayers.',
-  onClick: () => navigate('/AlQuran'),
-},
+      icon: faBookQuran,
+      title: '📖 Munajaate Maqbool',
+      desc: 'You must include these duas in your prayers.',
+      onClick: () => navigate('/AlMunajaat'),
+    },
+    {
+      icon: faBookQuran,
+      title: '📖 Al Quran',
+      desc: 'You must include these duas in your prayers.',
+      onClick: () => navigate('/AlQuran'),
+    },
   ];
 
   return (
@@ -70,21 +70,11 @@ const Home = () => {
         <HijriDate />
       </div>
 
-      {/* <section className="intro">
-        <motion.h2 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
-          Welcome to Islamic Prayer
-        </motion.h2>
-        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
-          Stay connected to your daily prayers, Quranic teachings, and more based on your city.
-        </motion.p>
-      </section> */}
 
-      {/* Spaced Prayer Countdown */}
       <div className="countdown-wrapper spaced-section">
         <PrayerCountdown />
       </div>
 
-      {/* Spaced Features Section */}
       <section className="features spaced-section">
         {features.map((item, i) => (
           <motion.div

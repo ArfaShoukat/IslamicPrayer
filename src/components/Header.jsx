@@ -1,7 +1,6 @@
 import React from 'react';
 import './Header.css';
-import DateInfoPage from './DateInfoPage';
-import logo1 from './images/logo1.png'; // Adjust the path if necessary
+import logo1 from './images/logo1.png';
 
 const Header = () => {
   return (

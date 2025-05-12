@@ -70,6 +70,7 @@
 
 /* Mobile responsive layout */
 @media (max-width: 768px) {
+
   .calendar-header,
   .calendar-row {
     display: flex;

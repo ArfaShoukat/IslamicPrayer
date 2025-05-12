@@ -1,5 +1,6 @@
 import React from 'react';
 import './ImpDuas.css';
+import BackArrow from '../components/BackArrow';
 
 const duas = [
   {
@@ -27,12 +28,12 @@ const duas = [
     translation: 'O Allah, take an easy reckoning.',
     source: 'Mishkat ul Masabeeh'
   },
-   {
+  {
     arabic: 'حَسْبِيَ اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ',
     translation: '“Allah is sufficient for me. There is none worthy of worship but Him. I have placed my trust in Him. He is the Lord of the Majestic throne.”',
     source: 'Sunan Abi Dawood'
   },
-   {
+  {
     arabic: 'حَسْبُنَا ٱللَّهُ وَنِعْمَ ٱلْوَكِيلُ',
     translation: 'Sufficient for us is Allah, and He is the best disposer of affairs',
     source: 'Surah Al-Imran'
@@ -57,6 +58,7 @@ const duas = [
 const ImpDuas = () => {
   return (
     <div className="imp-duas-page">
+      <BackArrow/>
       <h2>🕊️ Important Duas</h2>
       <p className="duas-desc">You must include these duas in your prayers.</p>
       <div className="duas-grid">

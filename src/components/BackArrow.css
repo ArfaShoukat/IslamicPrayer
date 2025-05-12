@@ -1,0 +1,18 @@
+.back-arrow {
+    background-color: transparent;
+    border: none;
+    color: #4d0404;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .back-arrow:hover {
+    color: #800000;
+  }
+  

@@ -1,6 +1,5 @@
-/* Footer.css */
 .footer {
-  background-color: #333; /* Dark background for footer */
+  background-color: #333;
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -23,16 +22,16 @@ p {
 
 @media (max-width: 768px) {
   p {
-    font-size: 0.9rem; /* Adjust font size for tablets */
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
   .footer {
-    padding: 15px 0; /* Slightly reduce padding on smaller screens */
+    padding: 15px 0;
   }
 
   p {
-    font-size: 0.85rem; /* Further reduce font size for mobile */
+    font-size: 0.85rem;
   }
 }
