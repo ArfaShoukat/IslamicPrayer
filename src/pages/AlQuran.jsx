@@ -4,10 +4,11 @@ const AlQuran = () => {
   return (
     <div style={{ height: '100vh' }}>
       <iframe
-        src="/assets/al-quran-ul-kareem.pdf"
+        src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://drive.google.com/uc?export=download&id=YOUR_FILE_ID"
         width="100%"
         height="100%"
-        title="al-quran-ul-kareem.pdf"
+        title="Al Quran PDF"
+        frameBorder="0"
       />
     </div>
   );
