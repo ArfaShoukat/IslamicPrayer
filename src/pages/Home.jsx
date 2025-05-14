@@ -49,12 +49,7 @@ const Home = () => {
       desc: 'Read and reflect on the Quran with daily verses and teachings.',
       onClick: () => navigate('/QuranicVerse'),
     },
-    {
-      icon: faBookQuran,
-      title: '📖 Munajaate Maqbool',
-      desc: 'You must include these duas in your prayers.',
-      onClick: () => navigate('/AlMunajaat'),
-    },
+  
     {
       icon: faBookQuran,
       title: '📖 Al Quran',
