@@ -39,7 +39,7 @@ const QuranicVerse = () => {
   return (
     <div className="quranic-verse-page">
       <BackArrow/>
-      <h1>📖 Quranic Verse of the Day</h1>
+      <h1 className='main-head'>📖 Quranic Verse of the Day</h1>
 
       <div className="verse-box">
         <h3>📜 Surah {verse.surah} (Surah {verse.surahNumber})</h3>

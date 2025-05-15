@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import BackArrow from '../components/BackArrow';
 
 const AlQuran = () => {
   const [surahs, setSurahs] = useState([]);
@@ -12,7 +13,7 @@ const AlQuran = () => {
       .catch(err => console.error(err));
   }, []);
 
-  // Load Surah content
+
   useEffect(() => {
     if (selectedSurah) {
       fetch(`https://api.alquran.cloud/v1/surah/${selectedSurah}`)
@@ -24,6 +25,7 @@ const AlQuran = () => {
 
   return (
     <div style={{ padding: '20px', fontFamily: 'sans-serif', fontSize: '1.2rem' }}>
+      <BackArrow />
       {selectedSurah === null ? (
         <div
           style={{
@@ -97,7 +99,7 @@ const AlQuran = () => {
                 }}
               >
                 {surahContent.ayahs.map(ayah => (
-                  <div style={{  fontSize: '2rem' }}key={ayah.number}>
+                  <div style={{ fontSize: '2rem' }} key={ayah.number}>
                     {ayah.text}
                     <span style={{ color: '#888', fontSize: '1rem' }}> ({ayah.numberInSurah})</span>
                     <hr style={{ border: 'none', borderBottom: '1px dotted #ddd' }} />

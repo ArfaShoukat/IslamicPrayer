@@ -1,7 +1,7 @@
 .back-arrow {
     background-color: transparent;
     border: none;
-    color: #4d0404;
+    color: #13044d;
     font-size: 1rem;
     cursor: pointer;
     display: flex;
@@ -10,9 +10,5 @@
     margin-top: 2rem;
     font-weight: bold;
     transition: color 0.3s ease;
-  }
-  
-  .back-arrow:hover {
-    color: #800000;
   }
   

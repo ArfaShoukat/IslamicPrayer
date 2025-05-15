@@ -4,6 +4,9 @@
   min-height: 100vh;
   text-align: center;
 }
+.main-head{
+color: black;
+}
 
 .verse-box {
   background: white;
